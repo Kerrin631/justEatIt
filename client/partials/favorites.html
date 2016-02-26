@@ -1,0 +1,38 @@
+<div ng-controller='favoritesController'>
+	
+<!-- {{favorites}} -->
+	<div>
+		<div class="row">
+			<div ng-repeat='favorite in favorites'>
+				<!-- {{favorite}} -->
+			    <div ng-repeat='info in favorite.favorites'>
+			    	<!-- {{info}} -->
+					    <div class="col s12 m12 l4">
+				    		<div class="card top">
+							    <div class="card-image waves-effect waves-block waves-light">
+							    	<img class="activator" src="{{info.image}}">
+							    </div>
+							    <div class="card-content">
+							    	<span class="card-title activator grey-text text-darken-4">{{info.title}}<i class="material-icons right">more_vert</i></span>
+							    	
+							    </div>
+							    <div class="card-reveal teal">
+							    	<span class="card-title grey-text text-darken-4">{{info.title}}<i class="material-icons right">close</i></span>
+							    	<div>
+						    			<ul ng-repeat = 'ingredients in info.ingredients track by $index'>
+						    				<li>{{ingredients}}</li>
+						    			</ul>
+							    	</div>
+							    	<p><a class="orange-text" href="{{info.link}}">Go to Cooking Instructions</a></p>
+							    </div>
+							</div>
+						</div>
+					</div> <!-- ng-repeat -->
+				</div>
+	    	</div>
+	    </div>
+	</div>
+</div>
+
+
+

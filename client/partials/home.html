@@ -1,0 +1,77 @@
+<div ng-controller='homeController'>
+	
+
+	<div id='foodPic' class='transparent z-depth-3'>
+	    <div class="section container center ">
+		    <img src="/static/images/just.png" height="100">
+		    <img src="/static/images/eat.jpg">
+		    <img src="/static/images/it.png" height="100">
+	    </div>
+	</div>
+
+	<div class="red lighten-1 z-depth-3">
+	    <div class="section container center ">
+	    	<div class="container">
+		    	<h1 class="white-text header center">Welcome!</h1>
+		    	<h5 class="thin white-text center">Gone are the days of forraging through your fridge or pantry trying to put together a tasty meal. With Just Eat It you can now get recipes generated based off of what you already have available!</h5>
+		    	<br>
+	    	</div>
+	    </div>
+	</div>
+
+	<br>
+	<div class="section">
+		<form class="container">
+			<div class="row">
+				<div ng-repeat='leftover in leftovers'>
+				    <div class="input-field col s7">
+				    	<input id="leftover" type="text" class="validate" ng-model='leftover.name'>
+				    	<label for="leftover">Ingredient</label>
+				    	<!-- <button ng-click="getValue(leftover)">get input value</button> -->
+				    </div>
+			    </div>
+			    <a class="btn-floating btn-large waves-effect waves-light green lighten-1"><i class="material-icons" ng-click="addfield()">add</i></a>
+			</div>
+			
+			<button class="btn waves-effect waves-purple" ng-click='sendIngredients($index)'>Submit
+			    <i class="material-icons right">restaurant</i>
+			</button>
+		</form>
+	</div>
+		<br><br>
+	<div>
+		<div class="row">
+			<div ng-repeat='recipe in recipes'>
+		    	<div ng-repeat='info in recipe'>
+				    <div class="col s12 m12 l4">
+			    		<div class="card top">
+						    <div class="card-image waves-effect waves-block waves-light">
+						    	<img class="activator" src="{{info.image_url}}" ng-click='getIngredients(info.recipe_id)'>
+						    </div>
+						    <div class="card-content">
+						    	<span class="card-title activator grey-text text-darken-4">{{info.title}}<i class="material-icons right">more_vert</i></span>
+						    	<p>Rating: {{info.social_rank | limitTo: 5}}</p>
+						    	
+						    </div>
+						    <div class="card-reveal teal">
+						    	<span class="card-title grey-text text-darken-4">{{info.title}}<i class="material-icons right">close</i></span>
+						    	<div ng-repeat='ingredient in ingredients'>
+						    		<div ng-repeat='item in ingredient.ingredients track by $index'>
+						    			<ul>
+						    				<li>{{item}}</li>
+						    			</ul>
+						    		</div>
+						    	</div>
+						    	<p><a class="orange-text" href="{{info.source_url}}">Go to Cooking Instructions</a></p>
+						    	<p><a class="orange-text" ng-click='addFavorite(ingredients)'>Add to Favorites</a></p>
+						    </div>
+						</div>
+					</div>
+				</div>
+	    	</div>
+	    </div>
+	</div>
+</div>
+
+
+

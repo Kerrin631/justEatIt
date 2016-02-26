@@ -1,0 +1,43 @@
+#foodPic img{
+	width: auto;
+	/*height: 500px;*/
+	/*margin-top: 25px;*/
+	display: inline-block;
+	vertical-align: middle;
+	/*padding: 20px;*/
+}
+.section{
+	height: auto;
+	min-height: 200px;
+}
+.top{
+	vertical-align: top;
+}
+.logSign{
+	height: auto;
+	/*min-height: 300px;*/
+	/*width: auto;*/
+	width: 33%;
+	margin: 50px;
+	display: inline-block;
+}
+.signUp{
+	padding: 30px;
+	display: inline-block;
+	min-height: 350px;
+	text-align: center;
+	width: 100%;
+}
+.signUp button{
+	margin-top: 20px
+}
+.logIn{
+	padding: 30px;
+	display: inline-block;
+	text-align: center;
+	height: 470px;
+	width: 100%
+}
+.logIn button{
+	margin-top: 95px;
+}

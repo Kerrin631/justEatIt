@@ -1,0 +1,14 @@
+{
+  "Author": "Kerrin Arora",
+  "Title": "Just Eat It",
+  "Version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "jsonwebtoken": "^5.7.0",
+    "mongoose": "^4.4.4",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "request": "^2.69.0"
+  }
+}

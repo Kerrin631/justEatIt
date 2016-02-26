@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Just Eat It</title>
+	<!-- THESE TWO VERSIONS BELOW MUST MATCH!!!! -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
+
+    <!-- call stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/static/stylesheet.css">
+
+    <!-- materialize icon stylesheet -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Add Materialize and jQuery -->
+    	<!-- Add jQuery -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    	<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+    <!-- call front end routes -->
+    <script type="text/javascript" src='/angular/app.js'></script>
+
+    <!-- call factories -->
+    <script type="text/javascript" src='/angular/factories/ingredientFactory.js'></script>
+    <script type="text/javascript" src='/angular/factories/userFactory.js'></script>
+
+    <!-- call controllers -->
+    <script type="text/javascript" src='/angular/controllers/homeController.js'></script>
+    <script type="text/javascript" src='/angular/controllers/userController.js'></script>
+    <script type="text/javascript" src='/angular/controllers/navBarController.js'></script>
+    <script type="text/javascript" src='/angular/controllers/favoritesController.js'></script>
+
+
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+		    $('.modal-trigger').leanModal();
+		});
+    </script>
+
+
+</head>
+<body ng-app='justEatIt_App'>
+	<!-- <div ng-app='justEatIt_App'> -->
+		<div id="header">
+			<div ng-controller='homeController'>
+				<div class="navbar-fixed">
+					<nav>
+						<div class="nav-wrapper cyan darken-3 z-depth-3 row">
+							<div class="head_nav_wrapper">
+								<div class="col s6 m6 pull-left l3">
+									<a class=" thin" ng-click='goHome()'>Just Eat It</a>
+								</div>
+								<div class="col m10 l8 right hide-on-med-and-down">
+									<ul id="nav-mobile" class="right">
+								    	<li><a ng-click='favoritesPage()'>Favorite Recipes</a></li>
+								    	<!-- <li><a href="#">Grocery List</a></li> -->
+								    	<li><a href="#/login">Login In / Sign Up</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	<!-- </div> -->
+
+
+		<div ng-view=''>
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<div ng-controller='userController'>
+
+	<div class="center">
+		<div class="logSign deep-orange lighten-4 z-depth-3">
+			<div class="signUp grey-text">
+				<h4>Sign Up</h4>
+			    <div class="row">
+			      <form class="col s12">
+			        <div class="row">
+			          <div class="input-field col s6">
+			            <input id="input_text" type="text" length="10" ng-model='newUser.first_name'>
+			            <label for="input_text">First Name</label>
+			          </div>
+			          <div class="input-field col s6">
+			            <input id="input_text" type="text" length="10" ng-model='newUser.last_name'>
+			            <label for="input_text">Last Name</label>
+			          </div>
+			          <div class="input-field col s12">
+			            <input id="input_text" type="text" length="10" ng-model='newUser.email'>
+			            <label for="input_text">Email</label>
+			          </div>
+			          <div class="input-field col s12">
+			            <input id="input_text" type="text" length="10" ng-model='newUser.password'>
+			            <label for="input_text">Password</label>
+			          </div>
+			           <button class="waves-effect waves-light btn-large" ng-click='register()'><i class="material-icons right">create</i>Register</button>
+			        </div>
+			      </form>
+			    </div>
+			</div>
+		</div>
+		<div class="logSign deep-orange lighten-4 z-depth-3">
+			<div class="logIn grey-text">
+				<h4>Log In</h4>
+				<div class="row">
+			      <form class="col s12">
+			        <div class="row">
+			          <div class="input-field col s12">
+			            <input id="input_text" type="text" length="10" ng-model='login.email'>
+			            <label for="input_text center">Email</label>
+			          </div>
+			          <div class="input-field col s12">
+			            <input id="input_text" type="text" length="10" ng-model='login.password'>
+			            <label for="input_text">Password</label>
+			          </div>
+			          <button class="waves-effect waves-light btn-large" ng-click='logIn()'><i class="material-icons right">face</i>Log In</button>
+			        </div>
+			      </form>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+</div>
